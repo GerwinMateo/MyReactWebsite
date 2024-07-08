@@ -53,6 +53,11 @@
   text-decoration: underline;
 }
 
+.Navbar.active {
+  text-decoration: underline;
+}
+
+
 
 /* Body Style Sheet */
 
@@ -64,7 +69,7 @@ body {
 
 .pdf-container {
   position: absolute;
-  top: 100px;
+  top: 160px;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -73,7 +78,6 @@ body {
 }
 
 .pdf-object {
-
   padding: 0; 
   width: 100%; 
   height: 100%; 
@@ -199,8 +203,18 @@ body {
   text-decoration: none;
 }
 
+.project-unlinked {
+  color: #ffdcc1;
+  text-decoration: none;
+}
+
+.project-unlinked:hover {
+  text-decoration: none ;
+}
+
 .project-link:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .project-git-link {
@@ -211,7 +225,10 @@ body {
 
 .project-git-link:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
+
+
 
 /* Footer Style Sheet */
 

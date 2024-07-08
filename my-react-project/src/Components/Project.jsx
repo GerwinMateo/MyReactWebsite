@@ -1,13 +1,20 @@
-
-function ProjectHelper ({ image, name, link, git, technologies, description }) {
+function ProjectHelper({ image, name, link, git, technologies, description }) {
+    const isLinked = !!link;
     return (
         <div className="project">
             <img src={image} alt="Project" className="project-image" />
             <div className="project-details">
                 <h1 className="project-name">
-                    <a className="project-link" href={link} target="_blank">{name} 
-                        <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
-                    </a>
+                    {isLinked ? (
+                        <a className="project-link" href={link} target="_blank" rel="noopener noreferrer">
+                            {name}
+                            <i className="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
+                        </a>
+                    ) : (
+                        <span className="project-unlinked">
+                            {name}
+                        </span>
+                    )}
                 </h1>
                 <h3 className="project-title">{technologies}</h3>
                 <p className="project-description">{description}</p>
@@ -20,6 +27,8 @@ function ProjectHelper ({ image, name, link, git, technologies, description }) {
         </div>
     );
 }
+
+
 
 function Project() {
     return (
@@ -37,14 +46,16 @@ function Project() {
             </div>
             <div className="project-container">
                 <ProjectHelper
-                    image="path/to/another-project-image.jpg"
-                    name="example"
-                    link=""
-                    technologies="HTML, CSS, JavaScript"
-                    description="A static website created using HTML, CSS, and vanilla JavaScript."
+                    image="discord+bot.png"
+                    name="Discord Bot"
+                    technologies="Python, Spotify API, OpenAI API"
+                    description="Dive into the ultimate music and conversation experience with CoralBot! Powered by the Spotify API, CoralBot lets you search for albums and discover new tracks"
+                    git="https://github.com/GerwinMateo/CoralBot"
                 />
             </div>
-            {/* Add more ProjectHelper components wrapped in .project-container */}
+            
+
+
         </div>
     );
 }
