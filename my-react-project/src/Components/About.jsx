@@ -26,7 +26,7 @@ function About() {
                     </div>
                 <div class="picture-info">
                     <h3>Software Engineer in Training</h3>
-                    <p>Curious, Creative, Charismatic. Rural Alaskan with interests in Web Development! Pursuing a B.S. in Computer Science at Stanford University.</p>
+                    <p>Curious, Creative, Charismatic. <br />Pursuing a B.S. in Computer Science at Stanford University.</p>
                     <p><i class="fa-solid fa-location-dot"></i> <strong>Stanford, CA</strong></p>
                 </div>
             </div>
