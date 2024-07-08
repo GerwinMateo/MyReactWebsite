@@ -3,9 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #7E7E7E;
+  background-color: #1d7873;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,26 +13,24 @@
 }
 
 /* Header Style Sheet */
-
 .Header {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
-  height: 12vw;
-  padding-top: 5px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #333;
+  background-color: #081d22;
   margin: 0;
   padding: 0;
-
+  z-index: 1000;
 }
 
 .Name {
-  font-size: 3.5vw;
-  color: #D2D2D2;
-  margin: 0;
+  font-size: 50px;
+  color: #c2d3ff;
+  margin-top: 20px;
   padding: 0;
 }
 
@@ -42,20 +39,20 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  font-size: 2vw;
-  padding: 10px;
-  margin: 1px 10px 0 ;
+  font-size: 27px;
+  margin: 0px 10px 0 ;
 }
 
 .Navbar {
   font-weight: bold;
-  color: #D2D2D2;
+  color: #f5c096;
   text-decoration: inherit;
 }
 
 .Navbar:hover {
   text-decoration: underline;
 }
+
 
 /* Body Style Sheet */
 
@@ -67,7 +64,7 @@ body {
 
 .pdf-container {
   position: absolute;
-  top: 12vw;
+  top: 100px;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -76,7 +73,7 @@ body {
 }
 
 .pdf-object {
-  border: none;
+
   padding: 0; 
   width: 100%; 
   height: 100%; 
@@ -85,23 +82,21 @@ body {
 .homepage-boxes {
   display: flex;
   justify-content: center; 
-  margin-top: 16vw;
+  margin-top: 2vw;
   gap: 5vw; 
 }
 
 .about-box, .picture-box {
-  background-color: #575757;
-  border-radius: 8px;
+  background-color: #679289;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 600px;
   width: 100%; 
-  border: 2px solid white;
 }
 
 .about-heading {
   font-size: 2.75rem; 
-  color: white;
+  color: #ffdcc1;
   text-align: center;
   margin-bottom: 1rem; 
 }
@@ -109,7 +104,7 @@ body {
 .about-text {
   font-size: 1.5rem; 
   line-height: 1.6;
-  color: #F4F4F4;
+  color: #ffefe3;
   margin-bottom: 1.5rem; 
   text-align: center;
 }
@@ -132,25 +127,19 @@ body {
   max-width: 100%; 
   height: 400px; 
   border-radius: 50%; 
-  border: 4px solid white;
-}
-
-.picture-info h1 {
-  font-size: 3rem;  
-  color: white;
-  text-align: center;
+  
 }
 
 .picture-info h3 {
-  font-size: 1.75rem;
-  color: #D2D2D2;
+  font-size: 2.5rem;
+  color: #ffdcc1;
   text-align: center;
 }
 
 .picture-info p {
-  font-size: 1.25rem; 
+  font-size: 1.5rem; 
   line-height: 1.6;
-  color: #F4F4F4;
+  color: #ffefe3;
   margin-bottom: 1rem; 
   text-align: center;
 }
@@ -159,19 +148,17 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  margin-top: 12vw; 
 }
 
 .project-header {
   font-size: 3rem;
+  color: #ffdcc1;
 }
 
 .project-container {
-  border: 2px solid #ccc; 
-  border-radius: 8px; 
   padding: 20px; 
   margin-bottom: 60px; 
-  background-color: #575757;
+  background-color:  #679289;
 }
 
 .project {
@@ -182,8 +169,6 @@ body {
   width: 300px;
   height: auto;
   margin-right: 20px;
-  border-radius: 4px; 
-  border: 1.5px solid #ccc; 
 }
 
 .project-details {
@@ -193,21 +178,24 @@ body {
 .project-name {
   font-size: 2rem; 
   margin-top: 0;
-  color: white;
+  color: #ffefe3;
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-top: 0;
-  color: #D2D2D2;
+  color: #ffefe3;
 }
 
 .project-description {
   margin-top: 10px;
+  color: #ffefe7;
+  font-size: 1.25rem;
+
 }
 
 .project-link {
-  color: white;
+  color: #ffdcc1;
   text-decoration: none;
 }
 
@@ -228,24 +216,22 @@ body {
 /* Footer Style Sheet */
 
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #081d22;
   padding: 20px;
   position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 
 }
 
 .Copyright {
   margin: 0;
-  font-size: 1.25vw;
-  font-weight: bold;
-  
+  font-size: 25px;
+  font-weight: bold; 
+  color: #ffdcc1;
 }
 
 .icons {
@@ -261,12 +247,13 @@ body {
 }
 
 .font-text {
-  color: #fff;
+  color: #ffdcc1;
   text-decoration: none;
   display: flex;
   align-items: center;
   font-weight: bold;
-  font-size: 1.25vw;
+  font-size: 25px;
+  
 }
 
 .font-text:hover {
@@ -280,8 +267,7 @@ body {
 /* Additional Components */
 
 .opportunities-box {
-  background-color: #575757;
-  border-radius: 8px;
+  background-color: #679289;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   margin-top: 4vw; 
@@ -294,7 +280,7 @@ body {
   font-style: oblique;
   font-weight: bold;
   line-height: 1.5;
-  color: white;
+  color: #ffefe3;
   white-space: nowrap; 
   animation: conveyor-belt 17s linear infinite; 
 }
@@ -312,17 +298,23 @@ body {
 
 /* Size adjustments */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media only screen and (max-width: 768px) {
+  .Name {
+    font-size: 45px;
   }
-  a:hover {
-    color: #747bff;
-  }
-}
 
-@media (max-width: 1000px) {
+  .Navbar {
+    font-size: 22px;
+  }
+
+  .Copyright {
+    font-size: 22px;
+  }
+
+  .font-text {
+    font-size: 18px;
+  }
+
   .homepage-boxes {
     flex-direction: column;
     align-items: center; 
@@ -338,4 +330,12 @@ body {
     padding-bottom: 150px;
   }
 
+  .footer {
+    justify-content:center;
+  }
+
+
 }
+
+
+

@@ -1,6 +1,4 @@
-
-function Header(){
-    
+function Header() { 
     return(
         <header class="Header">
             <h1 class="Name">
@@ -8,7 +6,7 @@ function Header(){
             </h1>
             <nav>
                 <ul class= "NavbarList">
-                    <li><a class="Navbar" href="home">Home </a></li>
+                    <li><a class="Navbar" href="/">Home </a></li>
                     <li><a class="Navbar" href="project">Projects </a></li>
                     <li><a class="Navbar" href="resume">Resume </a></li>
                 </ul>
@@ -17,4 +15,4 @@ function Header(){
     );
 }
 
-export default Header
+export default Header;

@@ -6,7 +6,7 @@ function About() {
                 <h1 class="about-heading">Some things about me! 🍉</h1>
 
                 <p class="about-text">
-                    I’m an engineer & entrepreneur focusing on Web Development. I’m also currently researching Large Language Models and considering building AI projects. I am a proud rural Alaskan hailing from Unalaska and a First Generation college student!
+                    I’m an engineer & entrepreneur focusing on Web Development. I’m also currently researching Large Language Models and building AI projects. I am a proud rural Alaskan hailing from Unalaska and a First Generation college student!
                 </p>
 
                 <p class="about-text">
@@ -25,7 +25,6 @@ function About() {
                         <img src="GerwinHeadshot.png" alt="Gerwin Delsocora Mateo Headshot"/>
                     </div>
                 <div class="picture-info">
-                    <h1>Gerwin Delsocora Mateo</h1>
                     <h3>Software Engineer in Training</h3>
                     <p>Curious, Creative, Charismatic. Rural Alaskan with interests in Web Development! Pursuing a B.S. in Computer Science at Stanford University.</p>
                     <p><i class="fa-solid fa-location-dot"></i> <strong>Stanford, CA</strong></p>

@@ -27,10 +27,10 @@ function Project() {
             <h1 className="project-header">My Projects</h1>
             <div className="project-container">
                 <ProjectHelper
-                    image="path/to/your/project-image.jpg"
+                    image="Portfolio.png"
                     name="Portfolio Website"
-                    link=""
-                    git="2"
+                    link="https://gerwinmateo.dev/"
+                    git="https://github.com/GerwinMateo/MyReactWebsite"
                     technologies="React, HTML, CSS"
                     description="A web application built with React frontend, utilizing HTML and CSS for structure and styling."
                 />
