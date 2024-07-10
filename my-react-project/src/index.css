@@ -2,10 +2,8 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color: rgba(255, 255, 255, 0.87);
   background-color: #1d7873;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +38,7 @@
   justify-content: center;
   gap: 30px;
   font-size: 27px;
-  margin: 0px 10px 0 ;
+  margin: 0 10px 0;
 }
 
 .Navbar {
@@ -57,10 +55,7 @@
   text-decoration: underline;
 }
 
-
-
 /* Body Style Sheet */
-
 body {
   margin: 0;
   padding: 0;
@@ -78,16 +73,16 @@ body {
 }
 
 .pdf-object {
-  padding: 0; 
-  width: 100%; 
-  height: 100%; 
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .homepage-boxes {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin-top: 2vw;
-  gap: 5vw; 
+  gap: 5vw;
 }
 
 .about-box, .picture-box {
@@ -95,21 +90,21 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 600px;
-  width: 100%; 
+  width: 100%;
 }
 
 .about-heading {
-  font-size: 2.75rem; 
+  font-size: 2.75rem;
   color: #ffdcc1;
   text-align: center;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .about-text {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   line-height: 1.6;
   color: #ffefe3;
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -123,15 +118,14 @@ body {
   text-decoration: underline;
 }
 
-.headshot { 
+.headshot {
   text-align: center;
 }
 
 .headshot img {
-  max-width: 100%; 
-  height: 400px; 
-  border-radius: 50%; 
-  
+  max-width: 100%;
+  height: 400px;
+  border-radius: 50%;
 }
 
 .picture-info h3 {
@@ -141,10 +135,10 @@ body {
 }
 
 .picture-info p {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   line-height: 1.6;
   color: #ffefe3;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -160,17 +154,19 @@ body {
 }
 
 .project-container {
-  padding: 20px; 
-  margin-bottom: 60px; 
-  background-color:  #679289;
+  padding: 20px;
+  margin-bottom: 60px;
+  background-color: #679289;
 }
 
 .project {
   display: flex;
+  flex-wrap: wrap; 
 }
 
 .project-image {
-  width: 300px;
+  width: 100%; 
+  max-width: 300px; 
   height: auto;
   margin-right: 20px;
 }
@@ -180,7 +176,7 @@ body {
 }
 
 .project-name {
-  font-size: 2rem; 
+  font-size: 2rem;
   margin-top: 0;
   color: #ffefe3;
 }
@@ -195,7 +191,6 @@ body {
   margin-top: 10px;
   color: #ffefe7;
   font-size: 1.25rem;
-
 }
 
 .project-link {
@@ -209,7 +204,7 @@ body {
 }
 
 .project-unlinked:hover {
-  text-decoration: none ;
+  text-decoration: none;
 }
 
 .project-link:hover {
@@ -218,7 +213,7 @@ body {
 }
 
 .project-git-link {
-  color:white;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -228,10 +223,7 @@ body {
   cursor: pointer;
 }
 
-
-
 /* Footer Style Sheet */
-
 .footer {
   background-color: #081d22;
   padding: 20px;
@@ -241,13 +233,12 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .Copyright {
   margin: 0;
   font-size: 25px;
-  font-weight: bold; 
+  font-weight: bold;
   color: #ffdcc1;
 }
 
@@ -270,7 +261,6 @@ body {
   align-items: center;
   font-weight: bold;
   font-size: 25px;
-  
 }
 
 .font-text:hover {
@@ -282,13 +272,12 @@ body {
 }
 
 /* Additional Components */
-
 .opportunities-box {
   background-color: #679289;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  margin-top: 4vw; 
-  overflow: hidden; 
+  margin-top: 4vw;
+  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -298,10 +287,9 @@ body {
   font-weight: bold;
   line-height: 1.5;
   color: #ffefe3;
-  white-space: nowrap; 
-  animation: conveyor-belt 17s linear infinite; 
+  white-space: nowrap;
+  animation: conveyor-belt 17s linear infinite;
 }
-
 
 @keyframes conveyor-belt {
   0% {
@@ -309,39 +297,41 @@ body {
   }
   100% {
     transform: translateX(-100%);
-      
   }
 }
 
-
 /* Size adjustments */
-
 @media only screen and (max-width: 768px) {
   .Name {
-    font-size: 45px;
+    font-size: 35px; 
   }
 
   .Navbar {
-    font-size: 22px;
+    font-size: 18px; 
   }
 
   .Copyright {
-    font-size: 22px;
+    font-size: 18px; 
   }
 
   .font-text {
-    font-size: 18px;
+    font-size: 14px; 
   }
 
   .homepage-boxes {
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
   }
-  
+
   .about-box, .picture-box {
     width: 90%;
-    max-width: 100%; 
+    max-width: 100%;
     margin-bottom: 5vw;
+  }
+
+  .headshot img {
+    height: auto; 
+    max-width: 80%; 
   }
 
   body {
@@ -349,11 +339,16 @@ body {
   }
 
   .footer {
-    justify-content:center;
+    justify-content: center;
+  }
+  .project {
+    flex-direction: column; 
+    align-items: center;
   }
 
-
+  .project-image {
+    margin-right: 0; 
+    margin-bottom: 20px;
+    width: 80%; 
+  }
 }
-
-
-
