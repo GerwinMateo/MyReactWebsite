@@ -1,0 +1,60 @@
+.Header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #081d22;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.Name {
+  font-size: 50px;
+  color: #c2d3ff;
+  margin-top: 20px;
+  padding: 0;
+  transition: 0.3s all ease;
+  text-decoration: none;
+}
+
+.Name:hover {
+  transform: scale(1.2);
+}
+
+.NavbarList {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 27px;
+  margin: 0px;
+}
+
+.Navbar {
+  font-weight: bold;
+  color: #f5c096;
+  text-decoration: inherit;
+  transition: all 0.5s ease;
+}
+
+.Navbar:hover {
+  text-decoration: underline;
+  font-size: 35px;
+  margin: 15px;
+}
+
+.Navbar:hover ~ .Navbar.active,
+.Navbar.active:hover {
+  font-size: 27px;
+}
+
+.Navbar.active {
+  text-decoration: underline;
+  background-color: #081d40;
+  margin: 0px;
+  font-size: 35px;
+}

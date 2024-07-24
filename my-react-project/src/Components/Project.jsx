@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import "./Project.css"
+
 function ProjectHelper({ image, name, link, git, technologies, description }) {
     const isLinked = !!link;
     return (
@@ -28,11 +31,15 @@ function ProjectHelper({ image, name, link, git, technologies, description }) {
     );
 }
 
-
-
 function Project() {
+    const [fadeIn, setFadeIn] = useState(false)
+
+    useEffect(() => {
+        setFadeIn(true); 
+    });
+
     return (
-        <div className="project-list">
+        <div className={`project-list ${fadeIn ? 'fade-in' : ''}`}>
             <h1 className="project-header">My Projects</h1>
             <div className="project-container">
                 <ProjectHelper

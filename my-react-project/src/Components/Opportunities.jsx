@@ -1,3 +1,4 @@
+import "./Opportunities.css"
 
 function Opportunities() {
     return (

@@ -1,0 +1,27 @@
+.opportunities-box {
+  background-color: #679289;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 4vw;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.opportunities-text {
+  font-size: 2rem;
+  font-style: oblique;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #ffefe3;
+  white-space: nowrap;
+  animation: conveyor-belt 17s linear infinite;
+}
+
+@keyframes conveyor-belt {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom'; 
+import "./Header.css"
+
 
 function Header() {
     const location = useLocation();
@@ -13,21 +15,25 @@ function Header() {
         window.location.href = path;
     };
 
-
     return (
         <header className="Header">
-            <h1 className="Name">
-                Gerwin Delsocora Mateo
+            <h1 class="Name">
+                <Link className="Name"
+                    to="/"
+                    >
+                    Gerwin Delsocora Mateo
+                </Link>
+                
             </h1>
             <nav>
                 <ul className="NavbarList">
                     <li>
                         <Link 
-                            className={`Navbar ${activeLink === '/' ? 'active' : ''}`} 
-                            to="/" 
-                            onClick={() => handleClick('/')}
+                            className={`Navbar ${activeLink === '/about' ? 'active' : ''}`} 
+                            to="/about" 
+                            onClick={() => handleClick('/about')}
                         >
-                            Home
+                            About
                         </Link>
                     </li>
                     <li>

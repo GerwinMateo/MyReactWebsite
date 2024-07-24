@@ -3,7 +3,7 @@ import Footer from '../Components/Footer'
 import About from '../Components/About'
 import Opportunities from '../Components/Opportunities'
 
-function HomePage() {
+function AboutPage() {
 
     return (
         <>
@@ -15,5 +15,5 @@ function HomePage() {
     )
 }
 
-export default HomePage
+export default AboutPage
 

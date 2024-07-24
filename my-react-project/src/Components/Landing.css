@@ -1,0 +1,120 @@
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160dvh;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .landing-container.fade-in {
+    opacity: 1;
+  }
+  
+  .content {
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    padding: 20px;
+    max-width: 800px;
+    color: #fff;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 1s ease-in-out;
+    transition: all 1s;
+  }
+  
+  .profile-picture:hover {
+    transition: all 1s;
+    transform: scale(1.4);
+  }
+  
+  .greeting {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .intro {
+    font-size: 1.3rem;
+    margin: 20px 0;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .experiences {
+    margin-top: 20px;
+  }
+  
+  .experience {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: left;
+    animation: fadeIn 3.5s ease-in-out;
+  }
+  
+  .experience-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .experience-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .experience-icon {
+    width: 36px;
+    height: 36px;
+    margin-left: 10px; 
+  }
+  
+  .experience-description {
+    font-size: 1.2rem;
+  }
+  
+  .experience-duration {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  

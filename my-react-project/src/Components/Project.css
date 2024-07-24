@@ -1,0 +1,96 @@
+.project-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.project-list.fade-in {
+  opacity: 1;
+}
+
+.project-header {
+  font-size: 3rem;
+  color: #ffdcc1;
+}
+
+.project-container {
+  padding: 20px;
+  margin-bottom: 60px;
+  background-color: #679289;
+  animation: zoomIn 1s ease-in-out;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  transition: all 0.5s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+}
+
+.project-details {
+  flex: 1;
+}
+
+.project-name {
+  font-size: 2rem;
+  margin-top: 0;
+  color: #ffefe3;
+}
+
+.project-title {
+  font-size: 1.75rem;
+  margin-top: 0;
+  color: #ffefe3;
+}
+
+.project-description {
+  margin-top: 10px;
+  color: #ffefe7;
+  font-size: 1.25rem;
+}
+
+.project-link {
+  color: #ffdcc1;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.project-unlinked {
+  color: #ffdcc1;
+  text-decoration: none;
+}
+
+.project-unlinked:hover {
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 2.25rem;
+}
+
+.project-git-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+.project-git-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1.25rem;
+}

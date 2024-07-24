@@ -1,0 +1,48 @@
+.footer {
+  background-color: #081d22;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Copyright {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffdcc1;
+}
+
+.icons {
+  list-style-type: none;
+  padding-right: 50px;
+  margin: 0;
+  display: flex;
+}
+
+.font-text-bundle {
+  margin-right: 40px;
+  font-size: 14px;
+}
+
+.font-text {
+  color: #ffdcc1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  transition: all 0.5s ease;
+}
+
+.font-text:hover {
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+.footer i {
+  margin-right: 7.5px;
+}
