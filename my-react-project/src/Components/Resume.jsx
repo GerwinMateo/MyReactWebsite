@@ -7,7 +7,7 @@ function Resume() {
 
   useEffect (() => {
     setFadeIn(true);
-  });
+  }, []);
   
   return (
     <div className={`pdf-container ${fadeIn ? "fade-in" : "" }`}>

@@ -13,6 +13,7 @@
 .project-header {
   font-size: 3rem;
   color: #ffdcc1;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .project-container {
@@ -47,29 +48,34 @@
   font-size: 2rem;
   margin-top: 0;
   color: #ffefe3;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .project-title {
   font-size: 1.75rem;
   margin-top: 0;
   color: #ffefe3;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .project-description {
   margin-top: 10px;
   color: #ffefe7;
   font-size: 1.25rem;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .project-link {
   color: #ffdcc1;
   text-decoration: none;
   transition: all 0.5s ease;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .project-unlinked {
   color: #ffdcc1;
   text-decoration: none;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .project-unlinked:hover {
@@ -87,6 +93,7 @@
   text-decoration: none;
   font-weight: bold;
   transition: all 0.5s ease;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .project-git-link:hover {

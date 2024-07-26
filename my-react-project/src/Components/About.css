@@ -26,6 +26,7 @@
   text-align: center;
   margin-bottom: 1rem;
   animation: zoomIn 0.55s ease-in-out;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .about-text {
@@ -35,12 +36,14 @@
   margin-bottom: 1.5rem;
   text-align: center;
   animation: zoomIn 0.55s ease-in-out;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .about-links {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .about-links:hover {
@@ -68,6 +71,7 @@
   color: #ffdcc1;
   text-align: center;
   animation: zoomIn 0.55s ease-in-out;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }
 
 .picture-info p {
@@ -77,4 +81,5 @@
   margin-bottom: 1rem;
   text-align: center;
   animation: zoomIn 0.55s ease-in-out;
+  text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
 }

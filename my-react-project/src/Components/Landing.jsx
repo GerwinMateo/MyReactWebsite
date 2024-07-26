@@ -20,7 +20,7 @@ function Landing() {
 
   useEffect(() => {
     setFadeIn(true);
-  });
+  }, []);
 
   return (
     <div className={`landing-container ${fadeIn ? 'fade-in' : ''}`}>

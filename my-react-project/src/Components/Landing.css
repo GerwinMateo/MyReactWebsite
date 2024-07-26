@@ -39,6 +39,9 @@
     font-size: 3rem;
     text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
     animation: fadeIn 2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 1000px;
   }
   
   .intro {
@@ -60,17 +63,25 @@
     color: #fff;
     text-align: left;
     animation: fadeIn 3.5s ease-in-out;
+    transition: 0.5s all ease;
+  }
+
+  .experience:hover {
+    transform: scale(1.1);
+    transition: 0.5s all ease;
   }
   
   .experience-header {
     display: flex;
     align-items: center;
+    text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
   }
   
   .experience-title {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
+    text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
   }
   
   .experience-icon {
@@ -81,11 +92,13 @@
   
   .experience-description {
     font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
   }
   
   .experience-duration {
     font-size: 1rem;
     color: #ddd;
+    text-shadow: 0 0 10px rgba(6, 4, 4, 0.3);
   }
   
   @keyframes zoomIn {

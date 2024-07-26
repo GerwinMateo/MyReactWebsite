@@ -36,7 +36,7 @@ function Project() {
 
     useEffect(() => {
         setFadeIn(true); 
-    });
+    }, []);
 
     return (
         <div className={`project-list ${fadeIn ? 'fade-in' : ''}`}>
