@@ -1,19 +1,31 @@
 .footer {
-  background-color: #081d22;
+  background: linear-gradient(
+    to right,
+    #081d22,
+    #0a2830,
+    #081d22
+  );
   padding: 20px;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  z-index: 1001;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .Copyright {
   margin: 0;
   font-size: 25px;
   font-weight: bold;
-  color: #ffdcc1;
+  background: linear-gradient(45deg, #ffdcc1, #ffefe3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .icons {
@@ -21,10 +33,12 @@
   padding-right: 50px;
   margin: 0;
   display: flex;
+  gap: 30px;
 }
 
 .font-text-bundle {
-  margin-right: 40px;
+  position: relative;
+  margin-right: 0;
   font-size: 14px;
 }
 
@@ -35,14 +49,50 @@
   align-items: center;
   font-weight: bold;
   font-size: 25px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .font-text:hover {
-  text-decoration: underline;
-  font-size: 30px;
+  text-decoration: none;
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffefe3;
 }
 
 .footer i {
-  margin-right: 7.5px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.font-text:hover i {
+  transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .Copyright {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .icons {
+    padding-right: 0;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .font-text {
+    font-size: 20px;
+  }
 }

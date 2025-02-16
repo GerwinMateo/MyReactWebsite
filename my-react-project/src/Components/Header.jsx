@@ -9,6 +9,10 @@ function Header() {
 
     const handleClick = (path) => {
         setActiveLink(path);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     };
 
     const handleReload = (path) => {
