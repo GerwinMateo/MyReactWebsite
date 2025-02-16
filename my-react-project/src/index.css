@@ -43,27 +43,23 @@ body {
 /* Size adjustments */
 @media only screen and (max-width: 768px) {
   .Name {
-    font-size: 35px; 
+    font-size: 35px;
   }
-
+  
   .NavbarList {
     margin-right: 5%;
   }
-  .Navbar {
-    font-size: 24px; 
-    align-items:center;
-  }
-
-  .Copyright {
-    font-size: 23px; 
-    margin-right: 7%;
-  }
-
+  
+  /* Group related mobile styles together */
+  .Navbar,
+  .Copyright,
   .font-text {
-    font-size: 14px; 
+    font-size: 24px;
   }
-
-  .homepage-boxes {
+  
+  /* Combine layout adjustments */
+  .homepage-boxes,
+  .project {
     flex-direction: column;
     align-items: center;
   }
@@ -87,11 +83,6 @@ body {
     justify-content: center;
   }
   
-  .project {
-    flex-direction: column; 
-    align-items: center;
-  }
-
   .project-image {
     margin-right: 0; 
     margin-bottom: 20px;

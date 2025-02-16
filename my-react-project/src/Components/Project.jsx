@@ -5,7 +5,13 @@ function ProjectHelper({ image, name, link, git, technologies, description }) {
     const isLinked = !!link;
     return (
         <div className="project">
-            <img src={image} alt="Project" className="project-image" />
+            {image ? (
+                <img src={image} alt="Project" className="project-image" />
+            ) : (
+                <div className="project-image-placeholder">
+                    {name === "MoodMatch" ? "🎵" : "🖼️"}
+                </div>
+            )}
             <div className="project-details">
                 <h1 className="project-name">
                     {isLinked ? (
@@ -53,6 +59,24 @@ function Project() {
             </div>
             <div className="project-container">
                 <ProjectHelper
+                    name="MoodMatch"
+                    technologies="React.js, Python, OpenRouter API, Spotify API"
+                    description="Developed an AI-powered music recommendation web application using React.js and Python (Flask), leveraging REST APIs for integration. Integrated Spotify API to fetch song data, album covers, and Spotify links, providing accurate music recommendations for various moods and activities. Used OpenRouter's LLaMA-3.1 model to generate dynamic music suggestions based on structured user prompts, allowing for personalized recommendations."
+                    git="https://github.com/GerwinMateo/MoodMatch"
+                />
+            </div>
+            <div className="project-container">
+                <ProjectHelper
+                    image="tracker.png"
+                    name="Inventory Tracker"
+                    link="https://inventory-management-a94qked38-gerwinmateos-projects.vercel.app"
+                    technologies="Typescript, React.js, Firebase, Next.js, Material-UI"
+                    description="Created a full-stack web application using Next.js with TypeScript and React.js for the frontend. Implemented a secure authentication system with Firebase Authentication, enabling user login and signup. Engineered an inventory tracking system that allows users to monitor items and access detailed descriptions. Deployed the application to Vercel, utilizing CI/CD pipelines for continuous integration and updates."
+                    git="https://github.com/GerwinMateo/Inventory_management-app"
+                />
+            </div>
+            <div className="project-container">
+                <ProjectHelper
                     image="discord+bot.png"
                     name="Discord Bot"
                     technologies="Python, Spotify API, OpenAI API"
@@ -60,12 +84,8 @@ function Project() {
                     git="https://github.com/GerwinMateo/CoralBot"
                 />
             </div>
-            
-
-
         </div>
     );
 }
-
 
 export default Project;

@@ -3,51 +3,94 @@ import './Landing.css';
 import ParticleBackground from './ParticleBackground';
 import { TypeAnimation } from 'react-type-animation';
 
-function Experience({ title, description, duration, icon }) {
-    return (
-      <div className="experience">
-        <div className="experience-header">
-          <h2 className="experience-title">{title}</h2>
-          {icon && <img src={icon} alt="Icon" className="experience-icon" />}
-        </div>
-        <p className="experience-description">{description}</p>
-        <p className="experience-duration">{duration}</p>
+// Memoize the Experience component since it's a pure component
+const Experience = React.memo(({ title, description, duration, icon }) => {
+  return (
+    <div className="experience">
+      <div className="experience-header">
+        <h2 className="experience-title">{title}</h2>
+        {icon && <img src={icon} alt="Icon" className="experience-icon" />}
       </div>
-    );
-  }
+      <p className="experience-description">{description}</p>
+      <p className="experience-duration">{duration}</p>
+    </div>
+  );
+});
 
-function Skills() {
-    return (
-        <div className="skills-section">
-            <h2 className="section-title">Technical Skills</h2>
-            <div className="skills-grid">
-                <div className="skill-category">
-                    <h3>Languages</h3>
-                    <p>Python • JavaScript • Java • HTML/CSS • SQL</p>
-                </div>
-                <div className="skill-category">
-                    <h3>Frameworks</h3>
-                    <p>React.js • Node.js • Express.js • Next.js</p>
-                </div>
-                <div className="skill-category">
-                    <h3>Tools</h3>
-                    <p>Git • Firebase • AWS • MongoDB • MySQL</p>
-                </div>
-                <div className="skill-category">
-                    <h3>Other</h3>
-                    <p>REST APIs • CI/CD • Agile • Unit Testing</p>
-                </div>
-            </div>
+// Memoize the Skills component
+const Skills = React.memo(() => {
+  return (
+    <div className="skills-section">
+      <h2 className="section-title">Technical Skills</h2>
+      <div className="skills-grid">
+        <div className="skill-category">
+          <h3>Languages</h3>
+          <p>Python • JavaScript • Java • HTML/CSS • SQL</p>
         </div>
-    );
-}
+        <div className="skill-category">
+          <h3>Frameworks</h3>
+          <p>React.js • Node.js • Express.js • Next.js</p>
+        </div>
+        <div className="skill-category">
+          <h3>Tools</h3>
+          <p>Git • Firebase • AWS • MongoDB • MySQL</p>
+        </div>
+        <div className="skill-category">
+          <h3>Other</h3>
+          <p>REST APIs • CI/CD • Agile • Unit Testing</p>
+        </div>
+      </div>
+    </div>
+  );
+});
+
+// Preload the headshot image
+const preloadImage = (src) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = resolve;
+    img.onerror = reject;
+    img.src = src;
+  });
+};
 
 function Landing() {
   const [fadeIn, setFadeIn] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    setFadeIn(true);
+    const loadImage = async () => {
+      try {
+        await preloadImage("GerwinHeadshot.png");
+        setImageLoaded(true);
+      } catch (error) {
+        console.error("Error loading image:", error);
+        setImageLoaded(true); // Show content even if image fails to load
+      }
+    };
+    loadImage();
   }, []);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      setFadeIn(true);
+    }
+  }, [imageLoaded]);
+
+  if (!imageLoaded) {
+    return (
+      <div style={{
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '1.5rem',
+        color: '#ffefe3'
+      }}>
+        Loading...
+      </div>
+    );
+  }
 
   return (
     <div className={`landing-container ${fadeIn ? 'fade-in' : ''}`}>

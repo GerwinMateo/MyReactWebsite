@@ -1,13 +1,32 @@
-import AboutPage from "./Pages/HomePage";
-import ProjectPage from "./Pages/ProjectPage";
-import ResumePage from "./Pages/ResumePage";
-import ErrorPage from "./Pages/404Page"
-import LandingPage from "./Pages/LandingPage";
+import React, { Suspense, lazy } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import React from "react";
+
+const LandingPage = lazy(() => import('./Pages/LandingPage'));
+const AboutPage = lazy(() => import('./Pages/HomePage'));
+const ProjectPage = lazy(() => import('./Pages/ProjectPage'));
+const ResumePage = lazy(() => import('./Pages/ResumePage'));
+const ErrorPage = lazy(() => import('./Pages/404Page'));
 
 const router = createBrowserRouter([
-  { path: "/", element: <LandingPage /> },
+  {
+    path: "/",
+    element: (
+      <Suspense fallback={
+        <div style={{
+          height: '100vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: '1.5rem',
+          color: '#ffefe3'
+        }}>
+          Loading...
+        </div>
+      }>
+        <LandingPage />
+      </Suspense>
+    ),
+  },
   { path: "/about", element: <AboutPage /> },
   { path: "/project", element: <ProjectPage /> },
   { path: "/resume", element: <ResumePage /> },
